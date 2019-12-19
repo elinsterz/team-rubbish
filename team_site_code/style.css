@@ -1,0 +1,107 @@
+@font-face {
+  font-family:'GT-America-Standard-Medium';
+  src: url('fonts/GT-America-Standard-Medium.eot');
+  src: url('fonts/GT-America-Standard-Medium.ttf');
+  format('truetype');
+}
+
+@font-face {
+  font-family:'GT-Sectra-Medium';
+  src: url('fonts/GT-Sectra-Medium.eot');
+  src: url('fonts/GT-Sectra-Medium.ttf');
+  format('truetype');
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #B0ABBA;
+  
+  display: flex;
+  align-items: center;
+}
+
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #797C91;
+  width: 350vmax;
+  z-index: -3;
+  animation: move 340s ease-in-out infinite;
+  transform-origin: 30% 10%;
+}
+
+.blob_b {
+  position: absolute;
+  top: -10;
+  left: 0;
+  fill: #C6BDC7;
+  width: 250vmax;
+  z-index: -2;
+  animation: movetwo 40s ease-in-out infinite;
+  transform-origin: 20% 0%;
+}
+
+@keyframes move {
+  0%   { transform: scale(1)   translate(10px, 0px); }
+  38%  { transform: scale(1.5, 1) translate(80vw, 0vh) rotate(60deg); }
+  40%  { transform: scale(1.5, 1) translate(80vw, 0vh) rotate(60deg); }
+  78%  { transform: scale(1.5) translate(0vw, 50vh) rotate(-20deg); }
+  80%  { transform: scale(1.5) translate(0vw, 50vh) rotate(-20deg); }
+  100% { transform: scale(1)   translate(10px, -30px); }
+}
+
+/* @keyframes movetwo {
+  0%   { transform: scale(1)   translate(10px, 10px); }
+  38%  { transform: scale(1.5, 1) translate(60vw, 0vh) rotate(30deg); }
+  40%  { transform: scale(1.5, 1) translate(60vw, 0vh) rotate(30deg); }
+  78%  { transform: scale(1.5) translate(0vw, 20vh) rotate(-40deg); }
+  80%  { transform: scale(1.5) translate(0vw, 20vh) rotate(-30deg); }
+  100% { transform: scale(1)   translate(0px, 0px); }
+}
+ */
+
+
+#team-div{
+  position: absolute;
+  top: 0px;
+  margin: 5%;
+  margin-top: 10%;
+  width: 70%;
+  /* border: 1px solid red; */
+}
+
+#team-rubbish-div{
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+
+#team-name{
+  font-family: 'GT-America-Standard-Medium';
+  font-size: 1em;
+  color: white;
+}
+
+#people{
+  font-family: 'GT-Sectra-Medium';
+  font-size: 5em;
+  color: white;
+  line-height: 0.5em;
+}
+
+#people > a{
+  color: white;
+  text-decoration: none;
+}
+
+#people > a:hover{
+  color: rgba(255,255,255,0.5);
+  cursor: 'assets/8bit_trash.png', auto;
+}
